@@ -1,0 +1,90 @@
+/* Import Relaxed, Beachy Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between rooms */
+}
+
+.room {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.room img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.room-details {
+    text-align: left; /* Align text to the left within room details */
+}
+
+.room h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.room p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap for smaller screens */
+    margin-bottom: 15px;
+}
+
+.amenity {
+    flex: 1 0 100px; /* Adjust flex-basis for smaller screens */
+    text-align: center;
+}
+
+.amenity i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .amenity {
+        flex: 1 0 80px; /* Adjust as needed */
+    }
+}
