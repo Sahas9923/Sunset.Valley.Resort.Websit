@@ -126,6 +126,13 @@ body {
     }
 }
 
+body {
+    background: url('images.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
 .progress-container {
     display: flex;
     justify-content: space-between;
