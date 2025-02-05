@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to right, #ffe866, #5eb1ff); /* Sunset Gradient */
+    background: linear-gradient(to right, #ebe15d, #5eb1ff); /* Sunset Gradient */
     color: white;
     padding: 15px 50px;
     display: flex;
@@ -68,7 +68,7 @@
 }
 
 .signup:hover {
-    background: #3244e9;
+    background: #f39b28;
     color: white;
 }
 
@@ -247,20 +247,24 @@ body {
 }
 
 body {
+    background: url('images.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
 /* About section styles */
 .about {
-    background-color: #f8efda;
+    background-color: #fff;
     padding: 50px;
     margin: 20px auto;
-    max-width: 1200px;
+    max-width: 1300px;
+    width: 100%; /* Ensures it takes up full width up to the max-width */
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Heading styles */
 .about h2 {
@@ -280,7 +284,7 @@ body {
 
 /* Button styles */
 .read-more {
-    background-color: #FF5733;
+    background-color: #8b33ff;
     color: #fff;
     font-size: 1em;
     padding: 10px 20px;
@@ -293,3 +297,99 @@ body {
 .read-more:hover {
     background-color: #E04F2B;
 }
+
+
+/* Card container styling */
+.cards {
+    display: flex; /* Align cards in a row */
+    justify-content: space-between; /* Distribute space evenly between cards */
+    gap: 15px; /* Gap between the cards */
+    margin: 40px 0; /* Space above and below the cards */
+    padding: 0 20px; /* Padding on the left and right sides */
+    width : 100%;
+}
+
+/* Card styling */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Each card takes up 30% of the width */
+    text-align: center; /* Center text inside cards */
+    padding: 20px; /* Padding inside the card */
+}
+
+/* Image inside card */
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Title styling */
+.card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 0;
+}
+
+/* Description text styling */
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Stack the cards vertically on smaller screens */
+        align-items: center; /* Center cards horizontally */
+    }
+    .card {
+        width: 80%; /* Make cards larger on small screens */
+        margin-bottom: 20px; /* Space between stacked cards */
+    }
+}
+/* Footer Section Styling */
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    padding: 40px 20px; /* Padding for spacing */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Distribute content evenly */
+    max-width: 1300px; /* Limit width to align with other sections */
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.2rem; /* Slightly larger text for headings */
+}
+
+.footer p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 1rem; /* Regular text size */
+}
+
+.footer-address, .footer-contact {
+    width: 45%; /* Allow both sections to take up 45% width */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack footer sections vertically on small screens */
+        align-items: center; /* Center content */
+    }
+
+    .footer-address, .footer-contact {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center text */
+    }
+}
+
+
+
