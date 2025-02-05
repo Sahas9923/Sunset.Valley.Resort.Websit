@@ -34,26 +34,42 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.profile-btn {
-    background-color: #ff9800;
-    color: white;
+/* Authentication Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
     border: none;
-    padding: 10px 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
-.profile-btn:hover {
-    background-color: #e68900;
+/* Login Button */
+.login {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
 }
 
-#profileName {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 10px;
-    color: #fff; /* Adjust color to match your design */
+.login:hover {
+    background: white;
+    color:  #3244e9;
+}
+
+/* Sign Up Button */
+.signup {
+    background: white;
+    color: #5e76ff;
+}
+
+.signup:hover {
+    background: #f39b28;
+    color: white;
 }
 
 /* ====== Sticky Navigation Bar (Under Header) ====== */
@@ -67,6 +83,7 @@
     z-index: 999;
     padding: 12px 0;
 }
+
 
 /* Navbar List */
 .navbar ul {
@@ -113,7 +130,7 @@ body {
     .navbar {
         top: 120px; /* Adjusted to be below the header */
         width: 100%;
-        border-radius: 0; /* Remove any radius */
+        border-radius: 0;;
     }
 
     .navbar ul {
@@ -126,21 +143,85 @@ body {
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* styles.css */
 body {
-    background: url('images.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-.progress-container {
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between rooms */
+}
+
+.room {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.room img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.room-details {
+    text-align: left; /* Align text to the left within room details */
+}
+
+.room h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.room p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.amenities {
     display: flex;
-    justify-content: space-between; /* Or center */
-    margin: 10px auto 20px; /* Adjust top/bottom margins as needed */
-    max-width: 800px; /* Or whatever width you want for the progress bar */
-    padding: 0 20px; /* Add left and right padding for alignment */
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap for smaller screens */
+    margin-bottom: 15px;
 }
 
+.amenity {
+    flex: 1 0 100px; /* Adjust flex-basis for smaller screens */
+    text-align: center;
+}
+
+.amenity i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
 
 /* Footer Section Styling */
 .footer {
@@ -171,7 +252,7 @@ body {
     width: 45%; /* Allow both sections to take up 45% width */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .footer-content {
         flex-direction: column; /* Stack footer sections vertically on small screens */
         align-items: center; /* Center content */

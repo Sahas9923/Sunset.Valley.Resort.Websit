@@ -116,7 +116,7 @@ body {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .header-top {
         flex-direction: column;
         text-align: center;
