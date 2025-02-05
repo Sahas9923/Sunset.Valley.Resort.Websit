@@ -1,54 +1,165 @@
-.booking-container {
-    max-width: 400px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.5); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-input, select, button {
-    background: white; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: url('images.jpg') no-repeat center center fixed;
+    background: url('../images/hotel-booking-bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-header {
-    text-align: center; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100px; 
+/* Header */
+.header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ebe15d, #5eb1ff); /* Sunset Gradient */
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Logo with Beachy Font */
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.navbar {
+    position: fixed;
+    top: 75px; /* Adjusted to be below the header */
+    left: 0;
+    width: 100%;
+    background: #000; /* Dark background for better visibility */
+    text-align: center;
+    z-index: 999;
+    padding: 12px 0;
+}
+
+
+/* Navbar List */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #0084ff; /* Golden highlight on hover */
+}
+
+/* Sticky Effect Spacing */
+body {
+    padding-top: 110px; /* Prevent content from hiding under the fixed header & navbar */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    .navbar {
+        top: 120px; /* Adjusted to be below the header */
+        width: 100%;
+        border-radius: 0;;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Booking Form Container */
+.booking-container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
 }
 
 label {
-    font-weight: bold;
-    margin-top: 10px;
+    font-weight: 600;
+    margin: 10px 0 5px;
 }
 
-input, select {
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    margin-top: 15px;
+input, select, textarea {
+    width: 100%;
     padding: 10px;
-    background: blue; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+button {
+    background: #ff5e62;
     color: white;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; 
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff9966;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

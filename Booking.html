@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Hotel XYZ</title>
+    <title>Booking | Sunset Valley Resort</title>
     <link rel="stylesheet" href="css_files/bookings.css">
 </head>
 <body>
-    <header>
-        <h1>Book Your Stay ! </h1>
+    <!-- Header Section (Logo & Auth Buttons) -->
+    <header class="header-top">
+        <div class="logo">Sunset Valley Resort</div>
+        <div class="auth-buttons">
+        </div>
     </header>
+
+    <!-- Navigation Bar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
 
     <section class="booking-container">
         <form action="submit_booking.php" method="POST">
@@ -19,20 +32,35 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
             <label for="checkin">Check-in Date:</label>
             <input type="date" id="checkin" name="checkin" required>
 
             <label for="checkout">Check-out Date:</label>
             <input type="date" id="checkout" name="checkout" required>
 
-            <label for="room">Select Room:</label>
-            <select id="room" name="room">
-                <option value="deluxe">Deluxe Room - $120/night</option>
-                <option value="suite">Suite Room - $200/night</option>
+            <label for="room">Room Type:</label>
+            <select id="room" name="room" required>
+                <option value="">Select a room type</option>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
             </select>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests" rows="4"></textarea>
 
             <button type="submit">Confirm Booking</button>
         </form>
     </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Sunset Valley Resort. All rights reserved.</p>
+    </footer>
 </body>
 </html>
