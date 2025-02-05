@@ -1,3 +1,15 @@
+/* Import Relaxed, Beachy Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Booking Container */
 .booking-container {
     max-width: 400px;
     margin: auto;
@@ -14,9 +26,10 @@ input, select, button {
 body {
     background: url('images.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Header */
 header {
     text-align: center; 
     display: flex; 
@@ -25,6 +38,7 @@ header {
     height: 100px; 
 }
 
+/* Form */
 form {
     display: flex;
     flex-direction: column;
