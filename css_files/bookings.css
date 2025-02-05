@@ -135,77 +135,11 @@ body {
 
 .progress-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
-    position: relative; /* For positioning the progress bar */
-  }
-  
-  .progress-bar {
-    position: relative;
-    margin-top: 10;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 5px;
-    width: 0; /* Initially 0 width */
-    background-color: blue; /* Or your preferred color */
-    transition: width 0.3s ease-in-out; /* Smooth transition */
-    z-index: 1; /* Ensure it's above the steps */
-  }
-  
-  .step {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #ccc;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2; /* Ensure it's above the progress bar */
-  }
-  
-  .step.active {
-    background-color: blue; /* Or your preferred color */
-  }
-  
-  .form-container {
-    border: 1px solid #ccc;
-    padding: 20px;
-  }
-  
-  .step-page {
-    display: none; /* Initially hide all pages */
-  }
-  
-  .step-page.active {
-    display: block; /* Show the active page */
-  }
-  
-  .next-btn, .prev-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Style the form elements as needed */
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-
+    justify-content: space-between; /* Or center */
+    margin: 10px auto 20px; /* Adjust top/bottom margins as needed */
+    max-width: 800px; /* Or whatever width you want for the progress bar */
+    padding: 0 20px; /* Add left and right padding for alignment */
+}
 
 
 /* Footer Section Styling */
