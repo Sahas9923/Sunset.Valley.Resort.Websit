@@ -1,2 +1,2 @@
-# Sunset.Valley.Resort.Websit
+# Sunset.Valley.Resort.Website
 NIBM-DMW-Coursework
