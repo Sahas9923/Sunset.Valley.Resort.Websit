@@ -135,38 +135,44 @@ body {
 
 .progress-container {
     display: flex;
-    justify-content: space-evenly; /* Or center */
-    margin: 50px auto 10px; /* Adjust top/bottom margins as needed */
-    max-width: 60%; /* Or whatever width you want for the progress bar */
-    padding: 20px; /* Add left and right padding for alignment */
-    background-color: rgba(0, 0, 0, 0.74); /* Light gray background */
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    max-width: 92%;
+    margin: 50px auto 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.74);
     border-radius: 10px;
 }
 
+/* Progress Bar */
 .progress-bar {
     height: 5px;
-    width: 0; /* Initial width */
-    background-color: blue;
-    transition: width 0.3s ease-in-out;
-    position: absolute; /* To position it behind the steps */
+    width: 0;
+    background-color: rgb(31, 31, 243);
+    position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    z-index: 1; /* Behind the steps */
+    transition: width 0.3s ease-in-out;
+    z-index: 0; /* Behind steps */
 }
 
+/* Steps */
 .step {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #e95f29;
+    background-color: #e95f29; /* Default: Orange */
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2; /* In front of the progress bar */
+    font-weight: bold;
+    z-index: 1; /* In front of progress bar */
 }
 
+/* Active Steps */
 .step.active {
     background-color: blue;
 }
@@ -188,101 +194,81 @@ body {
     color: #333; /* Dark gray for better readability */
 }
 
-/* Card Styles */
-/* Card Styles */
-/* Card Container */
-.card {
-    background-color: rgba(255, 255, 255, 0.9); /* Subtle transparency */
-    padding: 50px; /* Optimized padding */
-    margin: 50px auto; /* Centered with increased margin */
-    max-width: 95%; /* Adjusted max-width for responsiveness */
-    width: 60%; /* Controlled width */
-    border-radius: 10px; /* Smooth rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Soft shadow */
-    backdrop-filter: blur(5px); /* Modern blur effect */
-    text-align: center; /* Center text */
-    margin-top: -1px; /* Adjusted top margin */
-}
-
-/* Card Heading */
-.card h2 {
-    color: #0056b3; /* Professional blue */
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-
-/* Labels */
-.card label {
-    font-weight: bold;
-    display: block;
-    text-align: left;
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-
-/* Date Input Container */
-.date-container {
+.container {
     display: flex;
-    justify-content: center; /* Center the inputs */
-    align-items: center;
-    gap: 50px; /* Reduce space between inputs */
-    margin-bottom: 20px; /* Space before button */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-/* Individual Date Input Fields */
-.date-container div {
-    flex: 1; /* Ensures equal width */
-    max-width: 200px; /* Limits max width */
+.room-card {
+    width: 23%; /* Four cards in a row */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
 }
 
-/* Input Fields */
-.card input {
-    width: 100%; /* Full width inside its container */
-    padding: 10px;
+.room-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.room-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.room-price {
+    color: green;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+    margin: 5px 0;
 }
 
-/* Button Styles */
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.counter input {
+    width: 40px;
+    text-align: center;
+}
+
+.reserve-btn {
     background-color: #007bff;
     color: white;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
+    padding: 10px 15px;
     border: none;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    width: 30%; /* Full width under inputs */
+    border-radius: 5px;
 }
 
-.btn:hover {
-    background-color: #f89807;
-    transform: translateY(-3px);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+.reserve-btn:hover {
+    background-color: #0056b3;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    .date-container {
-        flex-direction: column;
-        gap: 15px; /* Increase spacing when stacked */
+@media (max-width: 1024px) {
+    .room-card {
+        width: 48%; /* Two in a row for smaller screens */
     }
-    
-    .card {
-        width: 90%;
-        padding: 30px;
-    }
+}
 
-    .btn {
-        width: 100%; /* Full-width button on small screens */
-        padding: 14px;
+@media (max-width: 600px) {
+    .room-card {
+        width: 100%; /* One in a row for mobile */
     }
 }
 
@@ -329,3 +315,5 @@ body {
         text-align: center; /* Center text */
     }
 }
+
+
