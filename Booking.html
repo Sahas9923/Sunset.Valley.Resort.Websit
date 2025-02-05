@@ -3,56 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Sunset Valley Resort</title>
-    <link rel="stylesheet" href="css_files/bookings.css">
+    <title>Sunset Valley Resort</title>
+    <link rel="stylesheet" href="css_files/bookings.css">    
 </head>
 <body>
+
     <!-- Header Section (Logo & Auth Buttons) -->
     <header class="header-top">
         <div class="logo">Sunset Valley Resort</div>
         <div class="auth-buttons">
+            <!-- Displaying Profile Name -->
+            <span id="profileName">Guest</span>
+            <button class="profile-btn" onclick="window.location.href='profile.html';">Profile</button>
         </div>
     </header>
 
     <!-- Navigation Bar Section -->
     <nav class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Rooms</a></li>
-            <li><a href="#">Bookings</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="booking.html">Bookings</a></li>
             <li><a href="#">About us</a></li>
         </ul>
     </nav>
 
-    <section class="booking-container">
-        <form action="submit_booking.php" method="POST">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Availability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress"></div>
+    <div class="step active">1</div>
+    <div class="step">2</div>
+    <div class="step">3</div>
+    <div class="step">4</div>
+  </div>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+  <div class="form-container">
+    <form id="multi-step-form">
 
-            <label for="checkin">Check-in Date:</label>
-            <input type="date" id="checkin" name="checkin" required>
+      <div class="step-page active" id="page1">
+        <h2>Welcome</h2>
+        <p>To get started, tell me a little about yourself.</p>
+        <label for="firstName">Your First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <label for="lastName">Your Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <label for="email">Your Email Address</label>
+        <input type="email" id="email" name="email" required>
+        <button type="button" class="next-btn">Next</button>
+      </div>
 
-            <label for="checkout">Check-out Date:</label>
-            <input type="date" id="checkout" name="checkout" required>
+      <div class="step-page" id="page2">
+        <h2>Favourite Things</h2>
+        <p>Tell me about your favourite things.</p>
+        <label for="favouriteThing">Favourite Thing</label>
+        <input type="text" id="favouriteThing" name="favouriteThing">
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="button" class="next-btn">Next</button>
+      </div>
 
-            <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" min="1" required>
+      <div class="step-page" id="page3">
+        <h2>Comments</h2>
+        <p>Any comments you'd like to share?</p>
+        <textarea id="comments" name="comments"></textarea>
+        <button type="button" class="prev-btn">Previous</button>
+        <a href="booking.html" class="button-link">Submit</a>
+      </div>
 
-            <label for="requests">Special Requests:</label>
-            <textarea id="requests" name="requests" rows="4"></textarea>
+      <div class="step-page" id="page4">
+        <h2>Thank You!</h2>
+        <p>Thank you for completing the form!</p>
+      </div>
 
-            <button type="submit">Confirm Booking</button>
-        </form>
-    </section>
+    </form>
+  </div>
 
+  <script src="script.js"></script>
+</body>
+</html>
+
+    </div>
+    <!-- Footer Section -->
     <footer class="footer">
-        <p>&copy; WW 2025 Sunset Valley Resort. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-address">
+                <h4>Sunset Valley Resort</h4>
+                <p>123 Beachside Avenue, Sunset City, Country</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Phone: +1 (234) 567-890</p>
+                <p>Email: info@sunsetvalley.com</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

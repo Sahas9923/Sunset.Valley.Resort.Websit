@@ -1,6 +1,7 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import Relaxed, Beachy Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
 
+/* Reset Default Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: url('../images/hotel-booking-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-}
-
-/* Header */
+/* ====== Sticky Header (Top Section: Logo & Auth Buttons) ====== */
 .header-top {
     position: fixed;
     top: 0;
@@ -38,6 +33,30 @@ body {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+.profile-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: #e68900;
+}
+
+#profileName {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #fff; /* Adjust color to match your design */
+}
+
+/* ====== Sticky Navigation Bar (Under Header) ====== */
 .navbar {
     position: fixed;
     top: 75px; /* Adjusted to be below the header */
@@ -48,7 +67,6 @@ body {
     z-index: 999;
     padding: 12px 0;
 }
-
 
 /* Navbar List */
 .navbar ul {
@@ -81,7 +99,7 @@ body {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .header-top {
         flex-direction: column;
         text-align: center;
@@ -95,7 +113,7 @@ body {
     .navbar {
         top: 120px; /* Adjusted to be below the header */
         width: 100%;
-        border-radius: 0;;
+        border-radius: 0; /* Remove any radius */
     }
 
     .navbar ul {
@@ -108,58 +126,118 @@ body {
     }
 }
 
-/* Booking Form Container */
-.booking-container {
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.9);
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Form Styles */
-form {
+.progress-container {
     display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-weight: 600;
-    margin: 10px 0 5px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    position: relative; /* For positioning the progress bar */
+  }
+  
+  .progress-bar {
+    position: relative;
+    margin-top: 10;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 0; /* Initially 0 width */
+    background-color: blue; /* Or your preferred color */
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1; /* Ensure it's above the steps */
+  }
+  
+  .step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Ensure it's above the progress bar */
+  }
+  
+  .step.active {
+    background-color: blue; /* Or your preferred color */
+  }
+  
+  .form-container {
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-/* Submit Button */
-button {
-    background: #ff5e62;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #ff9966;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
     padding: 20px;
-    background: #222;
+  }
+  
+  .step-page {
+    display: none; /* Initially hide all pages */
+  }
+  
+  .step-page.active {
+    display: block; /* Show the active page */
+  }
+  
+  .next-btn, .prev-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: blue;
     color: white;
-    position: fixed;
-    bottom: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the form elements as needed */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
     width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+
+
+/* Footer Section Styling */
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    padding: 40px 20px; /* Padding for spacing */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Distribute content evenly */
+    max-width: 1300px; /* Limit width to align with other sections */
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.2rem; /* Slightly larger text for headings */
+}
+
+.footer p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 1rem; /* Regular text size */
+}
+
+.footer-address, .footer-contact {
+    width: 45%; /* Allow both sections to take up 45% width */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack footer sections vertically on small screens */
+        align-items: center; /* Center content */
+    }
+
+    .footer-address, .footer-contact {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center text */
+    }
 }

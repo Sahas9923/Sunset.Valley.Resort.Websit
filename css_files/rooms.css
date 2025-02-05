@@ -142,216 +142,87 @@ body {
         margin: 10px 0;
     }
 }
-/* Hero Section */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
 
-/* Carousel Container */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-/* Carousel */
-.carousel {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Slides (Video and Images) */
-.slide {
-    min-width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.slide video, 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Navigation Buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color:transparent;
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 10;
-    transition: 0.3s;
-    border-radius: 50%;
-}
-
-.prev { left: 20px; }
-.next { right: 20px; }
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Hero Content */
-.hero-content {
-    position: absolute;
-    bottom: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 40px;
-    border-radius: 10px;
-}
-
-.hero-content pre {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #002fff;
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #e07b00;
-}
-
-
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* styles.css */
 body {
-    background: url('images.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-/* About section styles */
-.about {
-    background-color: #fff;
-    padding: 50px;
+.container {
+    max-width: 960px;
     margin: 20px auto;
-    max-width: 1300px;
-    width: 97%; /* Ensures it takes up full width up to the max-width */
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Heading styles */
-.about h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Paragraph styles */
-.about p {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-align: justify;
-}
-
-/* Button styles */
-.read-more {
-    background-color: #1114f1;
-    color: #fff;
-    font-size: 1em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.read-more:hover {
-    background-color: #E04F2B;
-}
-
-
-/* Card container styling */
-.cards {
-    display: flex; /* Align cards in a row */
-    justify-content: space-between; /* Distribute space evenly between cards */
-    gap: 15px; /* Gap between the cards */
-    margin: 40px 0; /* Space above and below the cards */
-    padding: 0 20px; /* Padding on the left and right sides */
-    width : 100%;
-}
-
-/* Card styling */
-.card {
+    padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%; /* Each card takes up 30% of the width */
-    text-align: center; /* Center text inside cards */
-    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between rooms */
 }
 
-/* Image inside card */
-.card-img {
-    width: 100%;
+.room {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.room img {
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block;
+    margin-bottom: 15px;
 }
 
-/* Title styling */
-.card h3 {
+.room-details {
+    text-align: left; /* Align text to the left within room details */
+}
+
+.room h2 {
     font-size: 1.5em;
-    color: #333;
-    margin: 15px 0;
+    margin-bottom: 10px;
 }
 
-/* Description text styling */
-.card p {
-    font-size: 1em;
-    color: #555;
+.room p {
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column; /* Stack the cards vertically on smaller screens */
-        align-items: center; /* Center cards horizontally */
-    }
-    .card {
-        width: 80%; /* Make cards larger on small screens */
-        margin-bottom: 20px; /* Space between stacked cards */
-    }
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap for smaller screens */
+    margin-bottom: 15px;
 }
+
+.amenity {
+    flex: 1 0 100px; /* Adjust flex-basis for smaller screens */
+    text-align: center;
+}
+
+.amenity i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
 /* Footer Section Styling */
 .footer {
     background-color: #000; /* Black background */
@@ -381,7 +252,7 @@ body {
     width: 45%; /* Allow both sections to take up 45% width */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .footer-content {
         flex-direction: column; /* Stack footer sections vertically on small screens */
         align-items: center; /* Center content */
@@ -392,6 +263,3 @@ body {
         text-align: center; /* Center text */
     }
 }
-
-
-

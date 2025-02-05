@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Rooms</title>
-    <link rel="stylesheet" href="roomstyles.css">
+    <link rel="stylesheet" href="css_files/rooms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <header class="header-top">
+        <div class="logo">Sunset Valley Resort</div>
+        <div class="auth-buttons">
+            <!-- Displaying Profile Name -->
+            <span id="profileName">Guest</span>
+            <button class="profile-btn" onclick="window.location.href='profile.html';">Profile</button>
+        </div>
+    </header>
+
+    <!-- Navigation Bar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <div class="room">
             <img src="deluxe_room_sea_view.jpg" alt="Deluxe Room with Sea View">
@@ -97,6 +117,24 @@
                 <a href="#" class="book-button">BOOK NOW</a>
             </div>
         </div>
-    </div>
+    </div> 
 </body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-address">
+            <h4>Sunset Valley Resort</h4>
+            <p>123 Beachside Avenue, Sunset City, Country</p>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Phone: +1 (234) 567-890</p>
+            <p>Email: info@sunsetvalley.com</p>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+
 </html>
