@@ -75,14 +75,15 @@
 /* ====== Sticky Navigation Bar (Under Header) ====== */
 .navbar {
     position: fixed;
-    top: 60px; /* Adjusted to be right below the header */
+    top: 70px; /* Adjusted to be below the header */
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9); /* Dark background for better visibility */
     text-align: center;
     z-index: 999;
     padding: 12px 0;
 }
+
 
 /* Navbar List */
 .navbar ul {
@@ -128,7 +129,7 @@ body {
 
     .navbar {
         width: 100%;
-        border-radius: 0;
+        border-radius: 0;;
     }
 
     .navbar ul {
@@ -185,7 +186,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color:transparent;
     color: white;
     border: none;
     padding: 15px;
@@ -206,7 +207,7 @@ body {
 /* Hero Content */
 .hero-content {
     position: absolute;
-    bottom: 10%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -216,7 +217,7 @@ body {
     border-radius: 10px;
 }
 
-.hero-content p {
+.hero-content pre {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
@@ -224,8 +225,8 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    background: #ff8c00;
+    padding: 10px 20px;
+    background: #002fff;
     color: white;
     font-size: 18px;
     text-decoration: none;
@@ -235,4 +236,60 @@ body {
 
 .btn:hover {
     background: #e07b00;
+}
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* About section styles */
+.about {
+    background-color: #f8efda;
+    padding: 50px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.about h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+.about p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Button styles */
+.read-more {
+    background-color: #FF5733;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #E04F2B;
 }
