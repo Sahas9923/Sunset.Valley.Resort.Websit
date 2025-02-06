@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Valley Resort</title>
+    <link rel="stylesheet" href="css_files/bookings_step_2.css">    
+</head>
+<body>
+
+    <!-- Header Section (Logo & Auth Buttons) -->
+    <header class="header-top">
+        <div class="logo">Sunset Valley Resort</div>
+        <div class="auth-buttons">
+            <!-- Displaying Profile Name -->
+            <span id="profileName">Guest</span>
+            <button class="profile-btn" onclick="window.location.href='profile.html';">Profile</button>
+        </div>
+    </header>
+
+    <!-- Navigation Bar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
+
+    <div class="progress-container">  <div class="progress-bar" id="progress"></div>
+        <div class="step active">1</div>
+        <div class="step active">2</div>
+        <div class="step">3</div>
+        <div class="step">4</div> 
+    </div>
+
+    <div class="container">
+        <!-- Room 1 -->
+        <div class="room-card">
+            <img src="Bedimages/image1.jpg" alt="Room 1">
+            <div class="room-title">Deluxe Room</div>
+            <p>A cozy deluxe room with ocean view.</p>
+            <div class="room-price">$120 per night</div>
+            <div class="counter">
+                <label>Rooms:</label>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+            <button class="reserve-btn" onclick="window.location.href='booking_step_3.html'">Reserve</button>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-card">
+            <img src="Bedimages/image2.jpg" alt="Room 2">
+            <div class="room-title">Luxury Suite</div>
+            <p>Spacious suite with premium amenities.</p>
+            <div class="room-price">$200 per night</div>
+            <div class="counter">
+                <label>Rooms:</label>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+            <button class="reserve-btn" onclick="window.location.href='booking_step_3.html'">Reserve</button>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-card">
+            <img src="Bedimages/image3.jpg" alt="Room 3">
+            <div class="room-title">Family Room</div>
+            <p>Perfect for families, with extra space.</p>
+            <div class="room-price">$150 per night</div>
+            <div class="counter">
+                <label>Rooms:</label>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+            <button class="reserve-btn" onclick="window.location.href='booking_step_3.html'">Reserve</button>
+        </div>
+
+        <!-- Room 4 -->
+        <div class="room-card">
+            <img src="Bedimages/image4.jpg" alt="Room 4">
+            <div class="room-title">Budget Room</div>
+            <p>Affordable room with basic facilities.</p>
+            <div class="room-price">$80 per night</div>
+            <div class="counter">
+                <label>Rooms:</label>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+            <button class="reserve-btn" onclick="window.location.href='booking_step_3.html'">Reserve</button>
+        </div>
+    </div>
+
+
+
+</body>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-address">
+                <h4>Sunset Valley Resort</h4>
+                <p>123 Beachside Avenue, Sunset City, Country</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Phone: +1 (234) 567-890</p>
+                <p>Email: info@sunsetvalley.com</p>
+            </div>
+        </div>
+    </footer>
+</html>

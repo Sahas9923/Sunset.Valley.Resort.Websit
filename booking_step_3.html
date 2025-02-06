@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunset Valley Resort</title>
-    <link rel="stylesheet" href="css_files/bookings.css">    
+    <link rel="stylesheet" href="css_files/bookings_step_3.css">    
 </head>
 <body>
 
@@ -30,30 +30,32 @@
 
     <div class="progress-container">  <div class="progress-bar" id="progress"></div>
         <div class="step active">1</div>
-        <div class="step">2</div>
-        <div class="step">3</div>
+        <div class="step active">2</div>
+        <div class="step active">3</div>
         <div class="step">4</div> 
     </div>
 
-    <div class="card">
-        <h2>Select Dates</h2>
-
-        <!-- Date Inputs in One Line -->
-        <div class="date-container">
-            <div>
-                <label for="checkin">Check-In Date</label>
-                <input type="date" id="checkin" name="checkin">
-            </div>
-            <div>
-                <label for="checkout">Check-Out Date</label>
-                <input type="date" id="checkout" name="checkout">
-            </div>
-        </div>
-
-        <!-- Button Underneath -->
-        <button class="btn" onclick="window.location.href='booking_step_2.html'">Check Availability</button>
+    <div class="form-group">
+        <label for="card_name">Cardholder Name:</label>
+        <input type="text" id="card_name" name="card_name" required>
     </div>
-
+    
+    <div class="form-group column-group">
+        <div class="half-column">
+            <label for="expiry_date">Expiry Date (MM/YY):</label>
+            <input type="text" id="expiry_date" name="expiry_date" required>
+        </div>
+    
+        <div class="half-column">
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+        </div>
+    
+        <div class="half-column">
+            <label for="amount">Amount (USD):</label>
+            <input type="number" id="amount" name="amount" required>
+        </div>
+    </div>
 </body>
     <!-- Footer Section -->
     <footer class="footer">

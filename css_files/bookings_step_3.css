@@ -62,7 +62,7 @@
     top: 75px; /* Adjusted to be below the header */
     left: 0;
     width: 100%;
-    background: #000; /* Dark background for better visibility */
+    background: rgba(0, 0, 0, 0.3); /* Dark background for better visibility */
     text-align: center;
     z-index: 999;
     padding: 12px 0;
@@ -135,38 +135,44 @@ body {
 
 .progress-container {
     display: flex;
-    justify-content: space-evenly; /* Or center */
-    margin: 50px auto 10px; /* Adjust top/bottom margins as needed */
-    max-width: 60%; /* Or whatever width you want for the progress bar */
-    padding: 20px; /* Add left and right padding for alignment */
-    background-color: rgba(255, 255, 255, 0.9); /* Light gray background */
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    max-width: 92%;
+    margin: 50px auto 10px;
+    padding: 20px;
+    background-color: white;
     border-radius: 10px;
 }
 
+/* Progress Bar */
 .progress-bar {
     height: 5px;
-    width: 0; /* Initial width */
-    background-color: blue;
-    transition: width 0.3s ease-in-out;
-    position: absolute; /* To position it behind the steps */
+    width: 0;
+    background-color: rgb(31, 31, 243);
+    position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    z-index: 1; /* Behind the steps */
+    transition: width 0.3s ease-in-out;
+    z-index: 0; /* Behind steps */
 }
 
+/* Steps */
 .step {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #e95f29;
+    background-color: #e95f29; /* Default: Orange */
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2; /* In front of the progress bar */
+    font-weight: bold;
+    z-index: 1; /* In front of progress bar */
 }
 
+/* Active Steps */
 .step.active {
     background-color: blue;
 }
@@ -188,9 +194,7 @@ body {
     color: #333; /* Dark gray for better readability */
 }
 
-/* Card Styles */
-/* Card Styles */
-/* Card Container */
+/* ====== Container for Card Info ====== */
 .card {
     background-color: rgba(255, 255, 255, 0.9); /* Subtle transparency */
     padding: 50px; /* Optimized padding */
@@ -220,23 +224,21 @@ body {
     font-size: 18px;
 }
 
-/* Date Input Container */
-.date-container {
+/* Column Layout for CVV, Expiry Date, Amount */
+.column-group {
     display: flex;
-    justify-content: center; /* Center the inputs */
-    align-items: center;
-    gap: 50px; /* Reduce space between inputs */
-    margin-bottom: 20px; /* Space before button */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-bottom: 20px;
 }
 
-/* Individual Date Input Fields */
-.date-container div {
-    flex: 1; /* Ensures equal width */
-    max-width: 200px; /* Limits max width */
+/* Individual Input Fields (CVV, Expiry Date, Amount) */
+.half-column {
+    width: 48%; /* 48% width for each input field */
+    margin-bottom: 15px;
 }
 
-/* Input Fields */
-.card input {
+input[type="text"], input[type="number"] {
     width: 100%; /* Full width inside its container */
     padding: 10px;
     font-size: 16px;
@@ -269,12 +271,12 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .date-container {
+@media (max-width: 600px) {
+    .column-group {
         flex-direction: column;
         gap: 15px; /* Increase spacing when stacked */
     }
-    
+
     .card {
         width: 90%;
         padding: 30px;
@@ -329,3 +331,5 @@ body {
         text-align: center; /* Center text */
     }
 }
+
+
