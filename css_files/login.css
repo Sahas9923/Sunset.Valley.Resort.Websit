@@ -9,12 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: url('../images/hotel-booking-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-}
-/* ====== Sticky Header (Top Section: Logo )====== */
+/* ====== Sticky Header (Top Section: Logo & Auth Buttons) ====== */
 .header-top {
     position: fixed;
     top: 0;
@@ -29,7 +24,6 @@ body {
     z-index: 1000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Logo with Beachy Font */
 .logo {
@@ -67,13 +61,13 @@ body {
     color:  #3244e9;
 }
 
-/* Register Button */
-.register {
+/* Sign Up Button */
+.signup {
     background: white;
     color: #5e76ff;
 }
 
-.register:hover {
+.signup:hover {
     background: #f39b28;
     color: white;
 }
@@ -81,7 +75,7 @@ body {
 /* ====== Sticky Navigation Bar (Under Header) ====== */
 .navbar {
     position: fixed;
-    top: 75px; /* Adjusted to be below the header */
+    top: 95px; /* Adjusted to be below the header */
     left: 0;
     width: 100%;
     background: #000; /* Dark background for better visibility */
@@ -89,7 +83,6 @@ body {
     z-index: 999;
     padding: 12px 0;
 }
-
 
 /* Navbar List */
 .navbar ul {
@@ -117,83 +110,79 @@ body {
 }
 
 /* Sticky Effect Spacing */
+/* Body Styling: Set background image and center everything */
 body {
-    padding-top: 110px; /* Prevent content from hiding under the fixed header & navbar */
-    background: url('images.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    margin-top: 65px;
+    margin-bottom: -25px;
+    padding: 0;
+    height: 100vh;
+    background-image: url('images.jpg');
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    background-position: center;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .header-top {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .auth-buttons {
-        margin-top: 10px;
-    }
-
-    .navbar {
-        top: 120px; /* Adjusted to be below the header */
-        width: 100%;
-        border-radius: 0;;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
+/* Container Styling: Make sure the container is centered */
+.container {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;   
+}
+.container ::content {
+    padding-top: 60px;
 }
 
-
-/* Footer Section Styling */
-.footer {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    padding: 40px 20px; /* Padding for spacing */
-    text-align: center; /* Center text */
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.footer-content {
-    display: flex; /* Align items in a row */
-    justify-content: space-between; /* Distribute content evenly */
-    max-width: 1300px; /* Limit width to align with other sections */
-    margin: 0 auto; /* Center the footer */
+/* Labels */
+label {
+    font-size: 14px;
+    text-align: left;
+    display: block;
 }
 
-.footer h4 {
-    margin-bottom: 10px; /* Space below the heading */
-    font-size: 1.2rem; /* Slightly larger text for headings */
+/* Submit Button */
+button {
+    padding: 10px 30px;
+    background-color: #3757e7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.footer p {
-    margin: 5px 0; /* Space between paragraphs */
-    font-size: 1rem; /* Regular text size */
+button:hover {
+    background-color: #e68900;
 }
 
-.footer-address, .footer-contact {
-    width: 45%; /* Allow both sections to take up 45% width */
+/* Links */
+div {
+    margin-top: 15px;
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Stack footer sections vertically on small screens */
-        align-items: center; /* Center content */
-    }
-
-    .footer-address, .footer-contact {
-        width: 100%; /* Full width on smaller screens */
-        text-align: center; /* Center text */
-    }
+div a {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 14px;
 }
 
+div a:hover {
+    text-decoration: underline;
+}
 
 

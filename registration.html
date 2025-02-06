@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>
+            Sunset Valley Resort
+        </title>
+        <link rel="stylesheet" href="css_files/registration.css";
+    </header>
+
+<body>
+    <div class="form-container"> 
+
+        <form name="registrationForm" action="register.php" method="POST" onsubmit="return validateForm()">
+
+            <div class="form-group">  <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+           <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+
+            <div class="form-group">  <label for="nic_passport">NIC/Passport:</label>
+                <input type="text" id="nic_passport" name="nic_passport" required>
+            </div>
+
+            <div class="form-group">  <label for="gender">Gender:</label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">  <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">  <label for="telephone">Telephone:</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+
+            <div class="form-group">  <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">  <label>Visitor Type:</label>
+                <div class="visitor-type-group">
+                    <input type="checkbox" id="local" name="visitor_type[]" value="local">
+                    <label for="local">Local</label>
+
+                    <input type="checkbox" id="foreign" name="visitor_type[]" value="foreign">
+                    <label for="foreign">Foreign</label>
+                </div>
+            </div>
+
+            <div class="form-group">  <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">  <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">  <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+
+            <button type="submit">Sign up</button>
+</body>
+</html>

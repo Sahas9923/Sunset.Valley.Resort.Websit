@@ -1,0 +1,83 @@
+/* styles.css */
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4; /* Light background color for the body */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0; /* Remove default body margins */
+}
+
+.form-container {
+    width: 500px; /* Adjust as needed */
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff; /* White background for the form container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Darker heading color */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Slightly darker label color */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Slightly larger font size for inputs */
+}
+
+textarea {
+    resize: vertical;
+    height: 100px; /* Set a reasonable default height for the textarea */
+}
+
+.gender-group,
+.visitor-type-group {
+    display: flex;
+    gap: 15px; /* Increased gap for better spacing */
+    align-items: center; /* Vertically align radio buttons/checkboxes and labels */
+}
+
+button {
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    width: 100%; /* Make the button full-width */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
