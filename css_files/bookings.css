@@ -139,7 +139,7 @@ body {
     margin: 50px auto 10px; /* Adjust top/bottom margins as needed */
     max-width: 60%; /* Or whatever width you want for the progress bar */
     padding: 20px; /* Add left and right padding for alignment */
-    background-color: rgba(0, 0, 0, 0.74); /* Light gray background */
+    background-color: rgba(255, 255, 255, 0.9); /* Light gray background */
     border-radius: 10px;
 }
 
@@ -269,7 +269,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .date-container {
         flex-direction: column;
         gap: 15px; /* Increase spacing when stacked */
