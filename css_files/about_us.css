@@ -1,0 +1,250 @@
+/* Import Relaxed, Beachy Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ====== Sticky Header (Top Section: Logo & Auth Buttons) ====== */
+.header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ebe15d, #5eb1ff); /* Sunset Gradient */
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo with Beachy Font */
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Authentication Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Login Button */
+.login {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.login:hover {
+    background: white;
+    color:  #3244e9;
+}
+
+/* Sign Up Button */
+.signup {
+    background: white;
+    color: #5e76ff;
+}
+
+.signup:hover {
+    background: #f39b28;
+    color: white;
+}
+
+/* ====== Sticky Navigation Bar (Under Header) ====== */
+.navbar {
+    position: fixed;
+    top: 95px; /* Adjusted to be below the header */
+    left: 0;
+    width: 100%;
+    background: #000; /* Dark background for better visibility */
+    text-align: center;
+    z-index: 999;
+    padding: 12px 0;
+}
+
+/* Navbar List */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #0084ff; /* Golden highlight on hover */
+}
+/* about section */
+.about-us{
+    background-color: #fff;
+    padding: 50px;
+    margin: 20px auto;
+    max-width: 1300px;
+    width: 97%; /* Ensures it takes up full width up to the max-width */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+    /* Heading styles */
+.about-us h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+.about_us p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+/*Mission Section*/
+.mission {
+    background-color: #f9f9f9;
+    padding: 50px;
+    margin: 20px auto;
+    max-width: 1300px;
+    width: 97%; /* Ensures it takes up full width up to the max-width */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Effect Spacing */
+/* Body Styling: Set background image and center everything */
+body {
+    margin-top: 65px;
+    margin-bottom: -25px;
+    padding: 0;
+    height: 100vh;
+    background-image: url('images.jpg');
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    background-position: center;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Container Styling: Make sure the container is centered */
+.container {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;   
+}
+.container ::content {
+    padding-top: 60px;
+}
+
+
+
+/* Submit Button */
+button {
+    padding: 10px 30px;
+    background-color: #3757e7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+/* Links */
+div {
+    margin-top: 15px;
+}
+
+div a {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+div a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Section Styling */
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    padding: 50px 20px; /* Padding for spacing */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Distribute content evenly */
+    max-width: 1300px; /* Limit width to align with other sections */
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.2rem; /* Slightly larger text for headings */
+}
+
+.footer p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 1rem; /* Regular text size */
+}
+
+.footer-address, .footer-contact {
+    width: 45%; /* Allow both sections to take up 45% width */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack footer sections vertically on small screens */
+        align-items: center; /* Center content */
+    }
+
+    .footer-address, .footer-contact {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center text */
+    }
+}
