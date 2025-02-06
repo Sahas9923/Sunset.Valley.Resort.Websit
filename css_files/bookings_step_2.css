@@ -34,28 +34,42 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.profile-btn {
-    background-color: #ff9800;
-    color: white;
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
     border: none;
-    padding: 10px 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
-.profile-btn:hover {
-    background-color: #e68900;
+/* Login Button */
+.login {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
 }
 
-#profileName {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 10px;
-    color: #fff; /* Adjust color to match your design */
+.login:hover {
+    background: white;
+    color:  #3244e9;
 }
 
+/* Sign Up Button */
+.signup {
+    background: white;
+    color: #5e76ff;
+}
+
+.signup:hover {
+    background: #f39b28;
+    color: white;
+}
 /* ====== Sticky Navigation Bar (Under Header) ====== */
 .navbar {
     position: fixed;

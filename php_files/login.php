@@ -1,39 +1,34 @@
-<?php
+<?php 
 session_start();
-include "php_files/conf";
+include 'conf.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-    // Input validation (add more as needed)
-    if (empty($username) || empty($password)) {
-        alert("Username and password are required.");
-        exit();
-    }
+    // Fetch user data from the database
+    $sql = "SELECT * FROM credentials WHERE username = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
-    try {
-        $conn = new PDO("mysql:host=" . $servername . ";dbname=" . $dbname, $dbusername, $dbpassword); // Use dbusername and dbpassword from conf.php
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        $stmt = $conn->prepare("SELECT id, password FROM users WHERE username = :username");
-        $stmt->bindParam(':username', $username);
-        $stmt->execute();
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($user && password_verify($password, $user['password'])) {  // Correct password check
-            $_SESSION["user_id"] = $user['id'];
-            $_SESSION["username"] = $username;
-            header("Location: welcome.php");
-            exit();
+    if ($row = mysqli_fetch_assoc($result)) {
+        // Check if the password matches
+        if ($password === $row['password']) {
+            header("Location: \Sunset Valley Resort_final\gitcode\Sunset.Valley.Resort.Websit\home.html");
         } else {
-            echo "Invalid username or password.";
+            alert("Invalid username or password.");
         }
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+    } else {
+        alert("Invalid username or password.");
     }
 
-    $conn = null;
+    mysqli_stmt_close($stmt);
 }
+
+mysqli_close($conn);
 ?>
+
+
 
