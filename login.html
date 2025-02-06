@@ -1,4 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Valley Resort</title>
+    <link rel="stylesheet" href="css_files/login.css">    
 
+    <script type="text/javascript">
+        function DoValidate(){
+        if(document.LoginForm.username.value == ""){
+            alert("Please enter user name");
+            return false;
+        }
+        if(document.LoginForm.password.value == ""){
+            alert("Please enter password");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header Section (Logo & Auth Buttons) -->
+    <header class="header-top">
+        <div class="logo">Sunset Valley Resort</div>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='login.html'">Login</button>
+            <button class="signup">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Navigation Bar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Page Form -->
+    <div class="container">
+        <form action="login.php" method="POST">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+            <div>
+                <a href="#">Forgot Password?</a>
+                <br>
+                <a href="signup.html">Do not have an account? Sign Up</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+<footer>
+
+</footer>
+</html>
 
 
        
