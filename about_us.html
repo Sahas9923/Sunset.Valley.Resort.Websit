@@ -31,7 +31,7 @@
     <section class="about-us">
         <div class="container">
             <h1>About Sunset Valley Resort</h1>
-            <p>Welcome to **Sunset Valley Resort**, a hidden paradise where luxury meets nature. Nestled along the breathtaking coastline, our resort offers a peaceful retreat with world-class amenities and exceptional hospitality.</p>
+            <p>Welcome to Sunset Valley Resort, a hidden paradise where luxury meets nature. Nestled along the breathtaking coastline, our resort offers a peaceful retreat with world-class amenities and exceptional hospitality.</p>
             </div>
     </section>
      <!-- Mission Section -->
@@ -41,6 +41,20 @@
             <p>Our mission is to redefine hotel booking by offering a fast, reliable, and transparent reservation platform.<p> We strive to help travelers find the perfect stay, tailored to their needs and budget, while ensuring top-tier customer support every step of the way..</p>
         </div>
     </section>
+
+    <!-- Vision Section -->
+    <section>
+        <div class="Vision">
+            <div class="container">
+    
+                <h2>Our Vision</h2>
+                <p> Sunset Valley Resort was created with a vision to offer travelers an escape from the ordinary. Over the years, we have grown into a world-renowned destination, hosting thousands of happy guests each year.
+                    To be the most trusted and user-friendly hotel reservation platform, making travel planning effortless for millions of users worldwide.
+                </p>
+            </div>
+        </div>
+    </section>
+        
     <!-- Features Section -->
              <section class="features">
                 <div class="container">
@@ -54,17 +68,71 @@
             </ul>
         </div>
     </section>
-    <!-- Story Section -->
-    <div class="story">
+    <!-- Review Section -->
+    <section class="reviews">
         <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="review-form">
+                <h3>Submit Your Review</h3>
+                <form id="reviewForm">
+                    <input type="text" id="reviewerName" placeholder="Your Name" required>
+                    <textarea id="reviewText" placeholder="Your Review" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="review-list">
+                <h3>Reviews</h3>
+                <ul id="reviews">
+                    <!-- Reviews will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <h2>Our Story</h2>
-            <p>Founded in 2005, **Sunset Valley Resort** was created with a vision to offer travelers an escape from the ordinary. Over the years, we have grown into a **world-renowned** destination, hosting thousands of happy guests each year.</p>
+    <!-- Staff Section -->
+    <section class="staff">
+        <div class="container">
+            <h2>Meet Our Staff</h2>
+            <div class="staff-cards">
+                <div class="staff-card" onclick="openPopup('staff1')">
+                    <img src="images/staff1.jpg" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                </div>
+                <div class="staff-card" onclick="openPopup('staff2')">
+                    <img src="images/staff2.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>General Manager</p>
+                </div>
+                <!-- Add more staff cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Popups -->
+    <div id="staff1" class="staff-popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('staff1')">&times;</span>
+            <h3>John Doe</h3>
+            <p>CEO</p>
+            <p>John has been leading the resort since 2005, bringing a wealth of experience in the hospitality industry.</p>
         </div>
     </div>
+    <div id="staff2" class="staff-popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('staff2')">&times;</span>
+            <h3>Jane Smith</h3>
+            <p>General Manager</p>
+            <p>Jane oversees the daily operations of the resort, ensuring that every guest has a pleasant stay.</p>
+        </div>
+    </div>
+
+
+
     
     
     <!-- Footer Section -->
+    
    <footer class="footer">
     <div class="footer-content">
         <div class="footer-address">
@@ -78,5 +146,6 @@
         </div>
     </div>
 </footer>
+<script src="js_files/reviews.js"></script>
     </body>
 </html>
