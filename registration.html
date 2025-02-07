@@ -1,72 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <header>
-        <title>
-            Sunset Valley Resort
-        </title>
-        <link rel="stylesheet" href="css_files/registration.css";
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Valley Resort</title>
+    <link rel="stylesheet" href="css_files/registration.css">    
+
+    <script type="text/javascript">
+        function DoValidate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if (username.trim() === "") {
+                alert("Please enter your username.");
+                return false;
+            }
+            if (password.trim() === "") {
+                alert("Please enter your password.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header Section (Logo & Auth Buttons) -->
+    <header class="header-top">
+        <div class="logo">Sunset Valley Resort</div>
+        <div class="auth-buttons">
+            <button class="signup"onclick="window.location.href='registration.html'">Join Community</button>
+        </div>
     </header>
 
-<body>
-    <div class="form-container"> 
+    <!-- Navigation Bar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <section class="card-section">  <div class="card">
+        <h3>Why join with community .......</h3>
+        <p>Joining a resort's community provides a range of benefits, including exclusive access to special offers, early notifications about discounts, and personalized deals based on your preferences. You'll also receive updates on new services, upcoming events, and unique activities, ensuring you never miss out on exciting opportunities like themed dinners or local tours. Being part of the community can enhance your overall experience by giving you priority access to bookings, smoother check-ins, and a more tailored, enjoyable stay.</p>
+    </div>
+    <div class="card">
+        
+        <h3>Get Registered Now</h3>
+        <form>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+        
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="local">Local</option>
+                <option value="foreign">Foreign</option>
+            </select>
+        
+            <button type="submit">Register</button>
+        </form>
+</section>  
 
-        <form name="registrationForm" action="register.php" method="POST" onsubmit="return validateForm()">
-
-            <div class="form-group">  <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name" required>
-           <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name" required>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-address">
+                <h4>Sunset Valley Resort</h4>
+                <p>123 Beachside Avenue, Sunset City, Country</p>
             </div>
-
-            <div class="form-group">  <label for="nic_passport">NIC/Passport:</label>
-                <input type="text" id="nic_passport" name="nic_passport" required>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Phone: +1 (234) 567-890</p>
+                <p>Email: info@sunsetvalley.com</p>
             </div>
+        </div>
+    </footer>
 
-            <div class="form-group">  <label for="gender">Gender:</label>
-                <div class="gender-group">
-                    <input type="radio" id="male" name="gender" value="male" required>
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Other</label>
-                </div>
-            </div>
-
-            <div class="form-group">  <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">  <label for="telephone">Telephone:</label>
-                <input type="tel" id="telephone" name="telephone" required>
-            </div>
-
-            <div class="form-group">  <label for="address">Address:</label>
-                <textarea id="address" name="address" rows="4" required></textarea>
-            </div>
-
-            <div class="form-group">  <label>Visitor Type:</label>
-                <div class="visitor-type-group">
-                    <input type="checkbox" id="local" name="visitor_type[]" value="local">
-                    <label for="local">Local</label>
-
-                    <input type="checkbox" id="foreign" name="visitor_type[]" value="foreign">
-                    <label for="foreign">Foreign</label>
-                </div>
-            </div>
-
-            <div class="form-group">  <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-
-            <div class="form-group">  <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <div class="form-group">  <label for="confirm_password">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" required>
-            </div>
-
-            <button type="submit">Sign up</button>
 </body>
 </html>
